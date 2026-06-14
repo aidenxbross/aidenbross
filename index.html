@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aiden Bross - Urban Exploration Content Creator from Rochester, NY. Featured in News10 NBC, Daily Express, The Mirror, and more.">
+    <meta name="keywords" content="Aiden Bross, Urban Exploration, Content Creator, Rochester NY, Abandoned Locations">
+    <meta name="author" content="Aiden Bross">
+    <title>Aiden Bross - Urban Exploration Creator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e0e0e0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 2rem 0;
+            border-bottom: 3px solid #ff006e;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #ff006e;
+            text-decoration: none;
+        }
+
+        nav a {
+            color: #e0e0e0;
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff006e;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, rgba(255, 0, 110, 0.1) 0%, rgba(8, 99, 145, 0.1) 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+            border-bottom: 2px solid #0863912e;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ff006e 0%, #0863912e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: #b0b0b0;
+            margin-bottom: 2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.8rem 1.5rem;
+            border: 2px solid #ff006e;
+            background: rgba(255, 0, 110, 0.1);
+            color: #ff006e;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #ff006e;
+            color: #1a1a2e;
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background: #ff006e;
+            color: #1a1a2e;
+            border-color: #ff006e;
+        }
+
+        .btn-primary:hover {
+            background: #ff006e;
+            color: #1a1a2e;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 4rem 0;
+            border-bottom: 1px solid rgba(255, 0, 110, 0.1);
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #ff006e;
+            text-align: center;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .about-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .highlight-card {
+            background: rgba(255, 0, 110, 0.05);
+            padding: 2rem;
+            border-left: 4px solid #ff006e;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        .highlight-card:hover {
+            background: rgba(255, 0, 110, 0.1);
+            transform: translateX(10px);
+        }
+
+        .highlight-card h3 {
+            color: #ff006e;
+            margin-bottom: 1rem;
+        }
+
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .media-item {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 0, 110, 0.2);
+            transition: all 0.3s;
+        }
+
+        .media-item:hover {
+            border-color: #ff006e;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255, 0, 110, 0.2);
+        }
+
+        .media-item h3 {
+            color: #ff006e;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .media-item p {
+            color: #b0b0b0;
+            margin-bottom: 1rem;
+        }
+
+        .media-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .media-links a {
+            color: #0863912e;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .media-links a:hover {
+            color: #ff006e;
+            text-decoration: underline;
+        }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .social-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            background: rgba(255, 0, 110, 0.05);
+            border: 2px solid rgba(255, 0, 110, 0.3);
+            border-radius: 8px;
+            color: #e0e0e0;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-weight: bold;
+        }
+
+        .social-btn:hover {
+            background: rgba(255, 0, 110, 0.2);
+            border-color: #ff006e;
+            transform: translateY(-5px);
+        }
+
+        .social-btn span {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 2rem;
+            text-align: center;
+            color: #707070;
+            border-top: 2px solid #ff006e;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        .featured-badge {
+            display: inline-block;
+            background: rgba(255, 0, 110, 0.2);
+            border: 1px solid #ff006e;
+            color: #ff006e;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            nav a {
+                margin-left: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="#" class="logo">AIDEN BROSS</a>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#content">Content</a>
+                <a href="#media">Media Coverage</a>
+                <a href="#follow">Follow</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>AIDEN BROSS</h1>
+            <p>Urban Exploration Content Creator | Rochester, NY</p>
+            <p style="font-size: 1rem; color: #a0a0a0;">Featured in News10 NBC • Daily Express • The Mirror • NewsFlare</p>
+            <div class="cta-buttons">
+                <a href="#follow" class="btn btn-primary">Follow Me</a>
+                <a href="#content" class="btn">Watch Content</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About</h2>
+            <div class="about-content">
+                <p>Aiden Bross is a US influencer from Rochester, New York who originally gained popularity from urban exploration content. His past explorations have led him to various abandoned sites, including military operations. Through his work, Aiden documents the history and stories behind forgotten locations, bringing them to light for millions of viewers worldwide.</p>
+                
+                <div class="highlights">
+                    <div class="highlight-card">
+                        <h3>📍 Location</h3>
+                        <p>Rochester, New York</p>
+                    </div>
+                    <div class="highlight-card">
+                        <h3>🎬 Content Type</h3>
+                        <p>Urban Exploration & Abandoned Site Documentation</p>
+                    </div>
+                    <div class="highlight-card">
+                        <h3>📺 Coverage</h3>
+                        <p>Featured in major news outlets internationally</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="content">
+        <div class="container">
+            <h2>Notable Content & Investigations</h2>
+            <div class="media-grid">
+                <div class="media-item">
+                    <div class="featured-badge">VIRAL CONTENT</div>
+                    <h3>Schiller Park Middle School</h3>
+                    <p><strong>April 2023</strong></p>
+                    <p>Aiden explored the abandoned Schiller Park Middle School in Buffalo, New York. His TikTok video showcasing the school's eerie atmosphere, with peeling paint, flooded rooms, and graffiti, went viral. Viewers noted its resemblance to settings from Netflix's "Stranger Things."</p>
+                    <div class="media-links">
+                        <a href="https://www.express.co.uk/life-style/property/1794636/abandoned-school-stranger-things" target="_blank">→ Daily Express Coverage</a>
+                        <a href="https://www.mirror.co.uk/news/world-news/inside-scary-abandoned-high-school-30541706" target="_blank">→ The Mirror Coverage</a>
+                        <a href="https://needtoknow.co.uk/2023/07/26/inside-scary-abandoned-high-school-that-looks-like-it-could-be-upside-down-from-stranger-things/" target="_blank">→ Need To Know UK</a>
+                    </div>
+                </div>
+
+                <div class="media-item">
+                    <div class="featured-badge">NEWS10 NBC</div>
+                    <h3>Rochester Riverside Hotel</h3>
+                    <p><strong>December 2023</strong></p>
+                    <p>Bross and a friend ventured into the closed hotel, capturing video footage that revealed extensive damage and vandalism. This footage was featured in a News10NBC investigation with an exclusive interview with Aiden.</p>
+                    <div class="media-links">
+                        <a href="https://www.whec.com/investigations/news10nbc-investigates-video-shows-destruction-inside-closed-riverside-hotel/" target="_blank">→ Investigation #1</a>
+                        <a href="https://www.whec.com/top-news/video-exposes-extensive-damage-to-closed-riverside-hotel-but-new-renovation-plan-brings-hope/" target="_blank">→ Investigation #2</a>
+                    </div>
+                </div>
+
+                <div class="media-item">
+                    <div class="featured-badge">GOVERNMENT COVERAGE</div>
+                    <h3>Terrence Tower & Rochester Psychiatric Center</h3>
+                    <p><strong>Recent Coverage</strong></p>
+                    <p>Coverage of the historic Terrence Tower and Rochester Psychiatric Center demolition project, highlighting $20 million in state funding for renovation and preservation efforts.</p>
+                    <div class="media-links">
+                        <a href="https://www.whec.com/top-news/rochester-psychiatric-center-to-be-demolished-with-20-million-in-state-funding-gov-hochul-announces/" target="_blank">→ News10 NBC Report</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="follow">
+        <div class="container">
+            <h2>Follow Aiden</h2>
+            <p style="text-align: center; margin-bottom: 2rem; color: #b0b0b0;">Connect on your favorite platform</p>
+            
+            <div style="max-width: 800px; margin: 0 auto;">
+                <h3 style="color: #ff006e; margin: 2rem 0 1rem; font-size: 1.2rem;">Main Platforms</h3>
+                <div class="social-grid">
+                    <a href="https://www.youtube.com/@aidenbross" target="_blank" class="social-btn">
+                        <span>📺</span>
+                        YouTube
+                    </a>
+                    <a href="https://www.instagram.com/aiden.bross" target="_blank" class="social-btn">
+                        <span>📸</span>
+                        Instagram
+                    </a>
+                    <a href="https://www.tiktok.com/@aidenbross" target="_blank" class="social-btn">
+                        <span>🎵</span>
+                        TikTok
+                    </a>
+                    <a href="https://www.snapchat.com/add/xaiden.brossx" target="_blank" class="social-btn">
+                        <span>👻</span>
+                        Snapchat
+                    </a>
+                </div>
+
+                <h3 style="color: #ff006e; margin: 2rem 0 1rem; font-size: 1.2rem;">More Profiles</h3>
+                <div class="social-grid">
+                    <a href="https://www.facebook.com/aidenxbross" target="_blank" class="social-btn">
+                        <span>📘</span>
+                        Facebook
+                    </a>
+                    <a href="https://www.facebook.com/xaidenbrossx" target="_blank" class="social-btn">
+                        <span>👥</span>
+                        Facebook (Main)
+                    </a>
+                    <a href="https://aidenbross.blogspot.com" target="_blank" class="social-btn">
+                        <span>📝</span>
+                        Blogger
+                    </a>
+                    <a href="https://linktr.ee/GLOBALMAPS" target="_blank" class="social-btn">
+                        <span>🔗</span>
+                        LinkTree
+                    </a>
+                </div>
+
+                <h3 style="color: #ff006e; margin: 2rem 0 1rem; font-size: 1.2rem;">Directories</h3>
+                <div class="social-grid">
+                    <a href="https://en.everybodywiki.com/Aiden_Bross" target="_blank" class="social-btn">
+                        <span>📖</span>
+                        EveryBodyWiki
+                    </a>
+                    <a href="https://peoplepill.com/i/aiden-bross" target="_blank" class="social-btn">
+                        <span>👤</span>
+                        PeoplePill
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p><strong>Aiden Bross</strong> | Urban Exploration Content Creator</p>
+        <p>Rochester, New York | Documenting Forgotten Stories</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem;">© 2024 Aiden Bross. All rights reserved.</p>
+    </footer>
+</body>
+</html>
